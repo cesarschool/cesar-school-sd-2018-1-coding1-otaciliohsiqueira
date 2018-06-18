@@ -7,23 +7,40 @@
  * Output: utilize a função printf da biblioteca stdio.h e escreva um número ou palavra por linha (\n):
  * 
  */
+
 void fizzBizz(int start, int end)
 {
+
     printf("\nFizzBizz::START: %d, %d\n", start, end);
-    
-    // TODO: Your code here!
-    // Ex.: printf("Fizz\n");
-    
+    for (int i = start; i < end; i ++) 
+    {
+        if ((i % 3 == 0) && (i % 5 == 0)) 
+        {
+            printf("FizzBizz\n");
+        }
+        else if (i % 3 == 0) 
+        {
+            printf("Fizz\n");
+        }
+        else if (i % 5 == 0) 
+        {
+            printf("Bizz\n");
+        }
+        else 
+        {
+            printf("%d\n", i);
+        }
+    }
     printf("\nFizzBizz::END\n");
 }
 
-int main()
+
+int main() 
 {
-    printf("\n### CESAR School :: Sistemas Digitais :: Coding1 :: FizzBizz ###\n");
-    
+
     fizzBizz(1, 6);
     fizzBizz(1, 16);
     fizzBizz(1, 100);
     
-    return 0;
+    return 0;   
 }
